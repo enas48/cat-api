@@ -1,0 +1,9 @@
+.cats-list{
+    display:flex;
+    flex-wrap:wrap;
+    /* gap: 16px; */
+}
+.cats-list img{
+    padding: 10px;
+    border-radius: 24px;
+}

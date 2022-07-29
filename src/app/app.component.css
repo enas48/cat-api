@@ -1,0 +1,24 @@
+.footer{
+    background: #000;
+    color:#fff;
+    border-top-left-radius:42px ;
+    border-top-right-radius: 42px;
+    padding:20px 60px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+.copyright {
+    padding-top: 12px;
+}
+.copyright span{
+   border-bottom: 1px solid #fff;
+   font-weight: bold;
+}
+@media screen and (max-width:480px) {
+    .footer{
+        padding: 20px;
+    }
+}

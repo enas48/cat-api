@@ -1,0 +1,23 @@
+/* enable absolute positioning */
+.inner-addon { 
+    position: relative; 
+}
+
+/* style icon */
+.inner-addon .glyphicon {
+  position: absolute;
+  padding: 10px;
+  pointer-events: none;
+}
+
+.right-addon .glyphicon { right: 0px;color: #000;}
+.right-addon input { padding-right: 30px; border-radius: 20px;color: #291507;font-size:18px;}
+
+@media screen and (max-width:480px) {
+    .right-addon input {
+        font-size: 13px;
+    }
+    .inner-addon .glyphicon{
+        padding: 7px;
+    }
+}
