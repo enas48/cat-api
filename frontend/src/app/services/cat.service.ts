@@ -15,9 +15,9 @@ export class CatService {
     }),
   };
   getCats(): Observable<any> {
-    return  this.http.get<any>('https://api.thecatapi.com/v1/images/search?limit=4&mime_types=jpg');
+    return  this.http.get<any>('http://localhost:3000/get');
   }
-  getCat(id:number): Observable<any> {
-    return  this.http.get<any>(`https://api.thecatapi.com/v1/images/${id}`);
-  }
+  // getCat(id:number): Observable<any> {
+  //   return  this.http.get<any>(`https://api.thecatapi.com/v1/images/${id}`);
+  // }
 }
