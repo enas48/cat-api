@@ -13,7 +13,8 @@ export class CatListComponent implements OnInit {
   constructor(private catService:CatService) { }
 
   ngOnInit(): void {
-   this.catService.getCats().subscribe(data=>{
+   this.catService.getCats(4).subscribe(data=>{
+    console.log(data)
       this.cats=data; 
    })
    

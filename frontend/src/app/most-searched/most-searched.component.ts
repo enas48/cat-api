@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CatService} from '../services/cat.service';
 
 @Component({
   selector: 'app-most-searched',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./most-searched.component.css']
 })
 export class MostSearchedComponent implements OnInit {
-
-  constructor() { }
+  cats:any;
+  constructor(private catService:CatService) { }
 
   ngOnInit(): void {
+    this.catService.getCats(3).subscribe(data=>{
+      console.log(data)
+        this.cats=data; 
+     })
   }
 
 }

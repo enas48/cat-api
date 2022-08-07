@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif;font-size:18px!important; }
+@font-face {
+    font-family: MontserratRegular;
+    src: url('../src/assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: MontserratBold;
+    src: url('../src/assets/fonts/Montserrat-Bold.ttf');
+    font-weight: 600;
+}
+html, body { height: 100%;  }
+body { margin: 0; font-family: MontserratRegular!important;font-size:18px!important; }

@@ -4,7 +4,10 @@
         <div class="intro col-6">
             <img src="../assets/images/CatwikiLogow.svg" alt="logo">
             <p>Get to know more about your cat breed</p>
-            <app-search></app-search>
+            <app-search (searchTextChanged)="onSearchEntered($event)"></app-search>
+            <div>
+                
+            </div>
 
         </div>
     </div>

@@ -15,8 +15,9 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
   getData
 })
-app.get('/get', (req, res) => {
-getData('https://api.thecatapi.com/v1/images/search?format=json&limit=4', req, res) 
+app.get('/get/:limit', (req, res) => {
+  const {limit}=req.params;
+getData(`https://api.thecatapi.com/v1/breeds?limit=${limit}&page=0`, req, res) 
 
 })
 
@@ -31,6 +32,7 @@ const getData = async (url = '', req, res) => {
   }).then(response => {
     res.send(JSON.stringify(response.data))
 }).catch(err => {
+  console.log(err);
     res.send(err);
 })
 };

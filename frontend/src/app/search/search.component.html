@@ -3,5 +3,5 @@
     <span class="glyphicon">
       <mat-icon matSuffix>search</mat-icon>
     </span>
-    <input type="text" class="form-control" placeholder="Enter your breed" />
+    <input type="text" class="form-control" [(ngModel)]="enteredSearchValue" placeholder="Enter your breed" (ngModelChange)="onSearchChange()" />
 </div>

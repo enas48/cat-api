@@ -1,0 +1,10 @@
+.cats-container{
+    margin-bottom: 20px;
+}
+.cats-container img{
+    padding: 10px;
+    border-radius: 24px;
+}
+.cats-container p{
+    padding: 10px;
+}
