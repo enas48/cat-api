@@ -8,3 +8,15 @@
 .cats-container p{
     padding: 10px;
 }
+h1{
+font-size:30px;
+font-weight:bold;
+font-family: MontserratBold;
+margin-top: 40px;
+}
+.cats-container h2{
+    padding: 10px;
+    font-size:25px;
+    font-family:bold;
+    font-family: MontserratBold;
+    }

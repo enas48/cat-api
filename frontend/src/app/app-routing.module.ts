@@ -7,7 +7,7 @@ import {MostSearchedComponent} from './most-searched/most-searched.component'
 const routes: Routes = [
 
   {path:'', component:HomepageComponent},
-  {path:'cat/:id', component:CatDetailsComponent},
+  {path:'cats/:id', component:CatDetailsComponent},
   {path:'mostsearched',component:MostSearchedComponent}
 ];
 

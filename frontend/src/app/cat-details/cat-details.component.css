@@ -1,0 +1,41 @@
+ img{
+    padding: 10px;
+    border-radius: 24px;
+}
+p{
+    margin-bottom:32px;
+}
+h2{
+    padding: 10px;
+    font-size:25px;
+    font-family:bold;
+    font-family: MontserratBold;
+    }
+    .bar-container{
+        display:flex;
+        margin-bottom:20px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .rate{
+        display: flex;
+        gap: 12px;
+    }
+    .rate span{
+     width: 60px;
+     height: 12px;
+     background:#E0E0E0; 
+     border-radius: 8px;
+     display:inline-block;
+    }
+    .rate span.active{
+        background: #544439;     
+    }
+
+    .img-container{
+      columns: 4 250px;
+      gap: 15px;
+    }
+    .img-container img{
+       width:100%
+    }

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute} from '@angular/router';
+import {CatService} from '../services/cat.service';
 
 @Component({
   selector: 'app-cat-details',
@@ -6,10 +8,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./cat-details.component.css']
 })
 export class CatDetailsComponent implements OnInit {
-
-  constructor() { }
+cat:any;
+image:string='';
+rates: number[] = [1, 2, 3, 4, 5];
+catimages:any;
+  constructor(private route: ActivatedRoute, private catService:CatService) { }
 
   ngOnInit(): void {
+    this.cat={
+      name:''
+    }
+ 
+    let id  = this.route.snapshot.params['id'];
+    //get cat
+    this.catService.getCat(id).subscribe(data=>{
+      console.log(data)
+      this.cat=data;
+
+      //get cat image 
+      this.catService.getImage(data.reference_image_id).subscribe(data=>{
+        console.log(data)
+        this.image=data.url;
+       })
+     })
+
+
+     //get cat images 
+     this.catService.getcatImages(id).subscribe(data=>{
+      console.log(data)
+      this.catimages=data;
+     })
   }
 
 }

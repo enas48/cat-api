@@ -14,7 +14,6 @@ export class CatListComponent implements OnInit {
 
   ngOnInit(): void {
    this.catService.getCats(4).subscribe(data=>{
-    console.log(data)
       this.cats=data; 
    })
    

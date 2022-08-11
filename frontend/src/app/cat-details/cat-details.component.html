@@ -1,1 +1,87 @@
-<p>cat-details works!</p>
+<div class="row">
+<div class="col-md-4">
+    <img src="{{image}}" class="img-fluid">
+</div>
+<div class="col-md-1"></div>
+<div class="col-md-7">
+    <h2>{{cat.name}}</h2>
+    <p>{{cat.description}}</p>
+    <p><b>Temperament: </b>{{cat.temperament}}</p>
+    <p><b>Origin: </b>{{cat.origin}}</p>
+    <p><b>Life Span: </b>{{cat.life_span}}</p>
+
+    <div class="bar-container">
+        <p><b>Adaptability: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.adaptability)}" ></span>
+        </div>
+        </div>
+    </div>
+    <div class="bar-container">
+        <p><b>Affection level: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.affection_level)}" ></span>
+        </div>
+        </div>
+    </div>
+    <div class="bar-container">
+        <p><b>Child Friendly: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.child_friendly)}" ></span>
+        </div>
+        </div>
+    </div>
+    <div class="bar-container">
+        <p><b>Grooming: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.grooming)}" ></span>
+        </div>
+        </div>
+    </div>
+    <div class="bar-container">
+        <p><b>Intelligence: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.intelligence)}" ></span>
+        </div>
+        </div>
+    </div>
+    <div class="bar-container">
+        <p><b>Health issues: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.health_issues)}" ></span>
+        </div>
+        </div>
+    </div>
+    <div class="bar-container">
+        <p><b>Social needs: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.social_needs)}" ></span>
+        </div>
+    </div>
+    </div>
+    <div class="bar-container">
+        <p><b>Stranger friendly: </b></p> 
+        <div class="rate">
+        <div  *ngFor="let rate of rates" >
+            <span  [ngClass]="{'active': (rate <= cat.stranger_friendly)}" ></span>
+        </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <h2>Other photos</h2>
+    <div class="row" >
+        <div class=" img-container">
+    
+    <div  *ngFor="let image of catimages">
+        <img src="{{image.url}}" />
+    </div>
+    </div>

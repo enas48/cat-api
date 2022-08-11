@@ -13,14 +13,36 @@ var axios = require('axios');
 
 app.get('/', (req, res) => {
   res.send('Hello World!')
-  getData
+
 })
-app.get('/get/:limit', (req, res) => {
+
+app.get('/getbreeds/:limit', (req, res) => {
   const {limit}=req.params;
 getData(`https://api.thecatapi.com/v1/breeds?limit=${limit}&page=0`, req, res) 
 
 })
 
+app.get('/getbreed/:id', (req, res) => {
+  const {id}=req.params;
+getData(`https://api.thecatapi.com/v1/breeds/${id}`, req, res) 
+
+})
+
+
+app.get('/getimage/:id', (req, res) => {
+  const {id}=req.params;
+getData(`https://api.thecatapi.com/v1/images/${id}`, req, res) 
+
+})
+
+app.get('/catimages/:id', (req, res) => {
+  const {id}=req.params;
+getData(`https://api.thecatapi.com/v1/images/search?format=json&limit=8&breed_ids=${id}`, req, res) 
+
+})
+
+
+//custom function to get Async data
 const getData = async (url = '', req, res) => {
  axios(url, {
     method: 'get',

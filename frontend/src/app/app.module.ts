@@ -13,6 +13,7 @@ import { CatDetailsComponent } from './cat-details/cat-details.component';
 import { MostSearchedComponent } from './most-searched/most-searched.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatIconModule} from '@angular/material/icon';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {MatIconModule} from '@angular/material/icon';
     SearchComponent,
     CatListComponent,
     CatDetailsComponent,
-    MostSearchedComponent
+    MostSearchedComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

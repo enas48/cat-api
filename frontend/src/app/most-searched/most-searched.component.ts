@@ -11,8 +11,9 @@ export class MostSearchedComponent implements OnInit {
   constructor(private catService:CatService) { }
 
   ngOnInit(): void {
-    this.catService.getCats(3).subscribe(data=>{
-      console.log(data)
+    
+    this.catService.getCats(10).subscribe(data=>{
+      console.log(data);
         this.cats=data; 
      })
   }
