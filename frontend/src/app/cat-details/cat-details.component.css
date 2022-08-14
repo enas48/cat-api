@@ -4,6 +4,7 @@
 }
 p{
     margin-bottom:32px;
+    padding:0 10px;
 }
 h2{
     padding: 10px;
@@ -35,6 +36,7 @@ h2{
     .img-container{
       columns: 4 250px;
       gap: 15px;
+      margin-bottom: 20px;
     }
     .img-container img{
        width:100%

@@ -1,8 +1,30 @@
 /*base style*/
-a{
-    color:#291507;
-    text-decoration: none;
+*{
+    box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    width:7px;
+    transition: all 1s ease-in-out;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #F2F2F2;
+    border-radius: 10px; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:  #BDBDBD;
+    border-radius: 10px; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
+
 h1,h2{
     font-size: 2.5em;
     font-weight:bold;
@@ -47,6 +69,38 @@ h1,h2{
     flex-direction: column;
     align-items: flex-end;
     gap:16px;
+}
+.results{
+    height:0px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    color:#291507;
+    padding: 10px;
+    position: absolute;
+    opacity:0;
+    transition: height 0.2s ease-in;
+}
+.results.show{
+    opacity: 1;
+    height:230px;
+}
+.results ul{
+    overflow:auto;
+    height:210px;
+    list-style: none;
+    padding: 0 10px 0 0;
+}
+.results ul li{
+   border-radius: 10px;
+   padding: 10px;
+    }
+.results ul li:hover{
+background:#F2F2F2;
+}
+
+.results a{
+    width: 100%;
 }
 
 @media screen and (max-width:480px) {

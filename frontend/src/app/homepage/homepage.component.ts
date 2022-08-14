@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CatService} from '../services/cat.service';
 
 @Component({
   selector: 'app-homepage',
@@ -7,13 +8,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomepageComponent implements OnInit {
   searchValue:String='';
-
-  constructor() { }
+  suggestedCats:any=[];
+  hidden:boolean=true;
+  constructor(private catService:CatService) { }
 
   ngOnInit(): void {
+
   }
   onSearchEntered(value:String){
     this.searchValue=value;
-    console.log(this.searchValue);
+    if(   this.searchValue !=''){
+      this.catService.searchByCatName(this.searchValue).subscribe(data=>{
+        this.suggestedCats=data;
+        this.hidden=false;
+       })
+    }else{
+      this.hidden=true;
+    }
+    
   }
 }

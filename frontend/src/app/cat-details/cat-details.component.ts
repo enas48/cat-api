@@ -22,12 +22,10 @@ catimages:any;
     let id  = this.route.snapshot.params['id'];
     //get cat
     this.catService.getCat(id).subscribe(data=>{
-      console.log(data)
       this.cat=data;
 
       //get cat image 
       this.catService.getImage(data.reference_image_id).subscribe(data=>{
-        console.log(data)
         this.image=data.url;
        })
      })
@@ -35,7 +33,6 @@ catimages:any;
 
      //get cat images 
      this.catService.getcatImages(id).subscribe(data=>{
-      console.log(data)
       this.catimages=data;
      })
   }

@@ -5,6 +5,21 @@
             <img src="../assets/images/CatwikiLogow.svg" alt="logo">
             <p>Get to know more about your cat breed</p>
             <app-search (searchTextChanged)="onSearchEntered($event)"></app-search>
+            <div  [ngClass]="hidden ? 'col-md-8 results' : 'show col-md-8 results'" >
+                <ul *ngIf="suggestedCats.length > 0">
+                    <li *ngFor="let cat of suggestedCats">
+                        <a [routerLink]="['/cats', cat.id]">
+                           {{cat.name}}
+                        </a>
+                    </li>
+                </ul>
+                <ul *ngIf="suggestedCats.length === 0">
+                    <li >
+                     No Result to show
+                    </li>
+                </ul>
+
+            </div>
             <div>
                 
             </div>

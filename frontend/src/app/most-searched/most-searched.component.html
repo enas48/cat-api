@@ -1,14 +1,18 @@
 <h1>Top 10 most searched breeds</h1>
 <div class="cats-list">
     <div *ngFor="let cat of cats; let i =index" class="cats-container row">
+    
         <div class="col-12 col-md-8 col-lg-10 order-md-2">
             <h2>{{i + 1}}. {{cat.name}}</h2>
             <p>{{cat.description}}</p>
        </div>
+   
         <div class="col-12 col-md-4 col-lg-2 order-md-1">
+            <a [routerLink]="['/cats', cat.id]">
              <img src="{{cat.image.url}}" class="img-fluid">
+            </a>
         </div>
-       
+     
     </div>
  </div>
     

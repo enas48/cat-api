@@ -26,4 +26,7 @@ export class CatService {
   getcatImages(id:String): Observable<any> {
     return  this.http.get<any>(`http://localhost:3000/catimages/${id}`);
   }
+  searchByCatName(name:String): Observable<any> {
+    return  this.http.get<any>(`http://localhost:3000/catbyname/${name}`);
+  }
 }

@@ -41,6 +41,12 @@ getData(`https://api.thecatapi.com/v1/images/search?format=json&limit=8&breed_id
 
 })
 
+app.get('/catbyname/:name', (req, res) => {
+  const {name}=req.params;
+getData(`https://api.thecatapi.com/v1/breeds/search?q=${name}`, req, res) 
+
+})
+
 
 //custom function to get Async data
 const getData = async (url = '', req, res) => {
@@ -49,7 +55,7 @@ const getData = async (url = '', req, res) => {
     credentials: 'same-origin',
     headers: { 
       'Content-Type': 'application/json', 
-      'x-api-key': process.env.SECRET_KEY
+      'x-api-key': 'ce08b7e5-01ca-450a-a1d3-abc9819bb15b'
     }
   }).then(response => {
     res.send(JSON.stringify(response.data))

@@ -11,11 +11,90 @@
 }
 
 .right-addon .glyphicon { right: 0px;color: #000;}
-.right-addon input { padding-right: 30px; border-radius: 20px;color: #291507;font-size:18px;}
+.right-addon input { padding-right: 30px; border-radius: 20px;color: #291507;font-size:18px;     border-color: #000;}
 
+.overlay {
+    position: fixed; /* Sit on top of the page content */
+    display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    padding:20px;
+    right: 0;
+    bottom: 0;
+    background-color: #fff; /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer; /* Add a pointer on hover */
+    overflow: hidden; /* Hide scrollbars */
+  }
+  .overlay.show{
+    display:block;
+  }
+  
+.times{
+    background: #F2F2F2;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #291507;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    margin-left: auto;
+
+}
+  .results{
+    height:0px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 20px;
+    color:#291507;
+    padding: 10px;
+    position: absolute;
+    opacity:0;
+    transition: height 0.2s ease-in;
+}
+.results.show{
+    opacity: 1;
+    height:230px;
+}
+.results ul{
+    overflow:auto;
+    height:210px;
+    list-style: none;
+    padding: 0 10px 0 0;
+}
+.results ul li{
+   border-radius: 10px;
+   padding: 10px;
+    }
+.results ul li:hover{
+background:#F2F2F2;
+}
+
+.results a{
+    width: 100%;
+}
+
+.phone{
+    display: none;
+}
+.pc{
+    display: block;
+}
+@media screen and (max-width: 767px) {
+    .phone{
+        display: block;
+    }
+    .pc{
+        display: none;
+    }
+}
 @media screen and (max-width:480px) {
     .right-addon input {
         font-size: 13px;
+   
     }
     .inner-addon .glyphicon{
         padding: 7px;
