@@ -1,5 +1,6 @@
+<div *ngIf="!showLoader" >
 <div class="row">
-<div class="col-md-4">
+<div class="col-md-4" >
     <img src="{{image}}" class="img-fluid">
 </div>
 <div class="col-md-1"></div>
@@ -78,11 +79,16 @@
 
     </div>
     <h2>Other photos</h2>
-    <div class="row" >
+    <div class="row" *ngIf="!showLoader">
         <div class=" img-container">
     
     <div  *ngFor="let image of catimages">
         <img src="{{image.url}}" />
     </div>
     </div>
- 
+    </div>
+</div>
+    <div class="col-md-12 " *ngIf="showLoader" style="height:81vh;" >
+        <app-spinner class=" h-100 d-flex justify-content-center align-items-center"></app-spinner> 
+        </div>
+    

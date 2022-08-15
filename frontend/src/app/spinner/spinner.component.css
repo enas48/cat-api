@@ -1,15 +1,11 @@
 .loader{
-    width: 150px;
-    height: 75px;
+    width: 130px;
+    height: 60px;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
     justify-content: space-between;
 }
-.loader span{
-    font-size: 22px;
-    margin: auto;
-}
+
 .ball:nth-child(2){
     animation-delay: 0.16s;
 }
@@ -17,17 +13,17 @@
     animation-delay: 0.32s;
 }
 .ball{
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
-    background: #E3E1DC;
+    background:rebeccapurple;
     animation: bounce 0.5s alternate infinite;
 }
 @keyframes bounce{
     from {
-        transform: scaleX(1.25);
+        transform: scaleX(1.2);
     }
     to{
-        transform: translate(-50px) scaleX(1);
+        transform: translate(-40px) scaleX(1);
     }
 }

@@ -61,7 +61,7 @@ const getData = async (url = '', req, res) => {
   }).then(response => {
     res.send(JSON.stringify(response.data))
 }).catch(err => {
-  console.log(err);
+
     res.send(err);
 })
 };

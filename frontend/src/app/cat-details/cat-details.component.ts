@@ -12,6 +12,7 @@ cat:any;
 image:string='';
 rates: number[] = [1, 2, 3, 4, 5];
 catimages:any;
+showLoader:boolean=true;
   constructor(private route: ActivatedRoute, private catService:CatService) { }
 
   ngOnInit(): void {
@@ -21,12 +22,13 @@ catimages:any;
  
     let id  = this.route.snapshot.params['id'];
     //get cat
+      this.showLoader = true;
     this.catService.getCat(id).subscribe(data=>{
       this.cat=data;
-
       //get cat image 
       this.catService.getImage(data.reference_image_id).subscribe(data=>{
         this.image=data.url;
+
        })
      })
 
@@ -34,6 +36,7 @@ catimages:any;
      //get cat images 
      this.catService.getcatImages(id).subscribe(data=>{
       this.catimages=data;
+      this.showLoader = false; 
      })
   }
 
