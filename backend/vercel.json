@@ -3,7 +3,7 @@
     "builds": [
       {
   
-        "src": "backend/start.js",
+        "src": "./start.js",
       
         "use": "@now/node"
       }
@@ -13,7 +13,7 @@
 
         "src": "/(.*)",
        
-        "dest": "backend/start.js"
+        "dest": "/"
       }
     ]
   }

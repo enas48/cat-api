@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders} from '@angular/common/http'; 
 import { Observable } from 'rxjs';
 const url='http://localhost:3000';
+const prodUrl='https://cat-api-backend.vercel.app';
 
 @Injectable({
   providedIn: 'root'
@@ -16,18 +17,18 @@ export class CatService {
     }),
   };
   getCats(limit:Number): Observable<any> {
-    return  this.http.get<any>(`${url}/getbreeds/${limit}`);
+    return  this.http.get<any>(`${prodUrl}/getbreeds/${limit}`);
   }
   getCat(id:String): Observable<any> {
-    return  this.http.get<any>(`${url}/getbreed/${id}`);
+    return  this.http.get<any>(`${prodUrl}/getbreed/${id}`);
   }
   getImage(id:String): Observable<any> {
-    return  this.http.get<any>(`${url}/getimage/${id}`);
+    return  this.http.get<any>(`${prodUrl}/getimage/${id}`);
   }
   getcatImages(id:String): Observable<any> {
-    return  this.http.get<any>(`${url}/catimages/${id}`);
+    return  this.http.get<any>(`${prodUrl}/catimages/${id}`);
   }
   searchByCatName(name:String): Observable<any> {
-    return  this.http.get<any>(`${url}/catbyname/${name}`);
+    return  this.http.get<any>(`${prodUrl}/catbyname/${name}`);
   }
 }

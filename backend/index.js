@@ -11,10 +11,10 @@ require('dotenv').config();
 var axios = require('axios');
 
 
-// app.get('/', (req, res) => {
-//   res.send('Hello World!')
+app.get('/', (req, res) => {
+  res.send('Hello World!')
 
-// })
+})
 
 app.get('/getbreeds/:limit', (req, res) => {
   const {limit}=req.params;
