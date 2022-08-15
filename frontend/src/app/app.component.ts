@@ -11,10 +11,11 @@ export class AppComponent {
   constructor() { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+
+      this.isLoader=false;
+      },2000);
   }
 
-  // setTimeout:any(() => {
-  //   this.isLoader=false;
 
-  // }, 3000);
 }

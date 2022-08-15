@@ -10,10 +10,11 @@ export class HomepageComponent implements OnInit {
   searchValue:String='';
   suggestedCats:any=[];
   hidden:boolean=true;
+
   constructor(private catService:CatService) { }
 
   ngOnInit(): void {
-
+    
   }
   onSearchEntered(value:String){
     this.searchValue=value;
@@ -27,4 +28,6 @@ export class HomepageComponent implements OnInit {
     }
     
   }
+
+
 }
