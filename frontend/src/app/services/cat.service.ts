@@ -16,18 +16,18 @@ export class CatService {
     }),
   };
   getCats(limit:Number): Observable<any> {
-    return  this.http.get<any>(`https://cat-api-beta.vercel.app/getbreeds/${limit}`);
+    return  this.http.get<any>(`/getbreeds/${limit}`);
   }
   getCat(id:String): Observable<any> {
-    return  this.http.get<any>(`https://cat-api-beta.vercel.app/getbreed/${id}`);
+    return  this.http.get<any>(`/getbreed/${id}`);
   }
   getImage(id:String): Observable<any> {
-    return  this.http.get<any>(`https://cat-api-beta.vercel.app/getimage/${id}`);
+    return  this.http.get<any>(`/getimage/${id}`);
   }
   getcatImages(id:String): Observable<any> {
-    return  this.http.get<any>(`https://cat-api-beta.vercel.app/catimages/${id}`);
+    return  this.http.get<any>(`/catimages/${id}`);
   }
   searchByCatName(name:String): Observable<any> {
-    return  this.http.get<any>(`https://cat-api-beta.vercel.app/catbyname/${name}`);
+    return  this.http.get<any>(`/catbyname/${name}`);
   }
 }
