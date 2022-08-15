@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'catWiki';
+  isLoader:boolean=true;  
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+  // setTimeout:any(() => {
+  //   this.isLoader=false;
+
+  // }, 3000);
 }

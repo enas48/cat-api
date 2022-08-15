@@ -1,12 +1,13 @@
-<div class="container mt-3">
+<div class="container mt-3" *ngIf="!isLoader">
   <header>
       <a routerLink="/">
           <img src="../assets/images/CatwikiLogo.svg" alt="logo"/>
       </a>
   </header>
-  <div class="mt-3">
+  <div class="mt-3" >
   <router-outlet></router-outlet> 
   </div>
+
 
   <footer class="footer container">
     <a routerLink="/">
@@ -18,3 +19,6 @@
 </footer>
 
 </div>
+<div class="col-md-12 h-100" *ngIf="isLoader">
+    <app-spinner class=" h-100 d-flex justify-content-center align-items-center"></app-spinner> 
+    </div>
