@@ -16,18 +16,18 @@ export class CatService {
     }),
   };
   getCats(limit:Number): Observable<any> {
-    return  this.http.get<any>(`/getbreeds/${limit}`);
+    return  this.http.get<any>(`${url}/getbreeds/${limit}`);
   }
   getCat(id:String): Observable<any> {
-    return  this.http.get<any>(`/getbreed/${id}`);
+    return  this.http.get<any>(`${url}/getbreed/${id}`);
   }
   getImage(id:String): Observable<any> {
-    return  this.http.get<any>(`/getimage/${id}`);
+    return  this.http.get<any>(`${url}/getimage/${id}`);
   }
   getcatImages(id:String): Observable<any> {
-    return  this.http.get<any>(`/catimages/${id}`);
+    return  this.http.get<any>(`${url}/catimages/${id}`);
   }
   searchByCatName(name:String): Observable<any> {
-    return  this.http.get<any>(`/catbyname/${name}`);
+    return  this.http.get<any>(`${url}/catbyname/${name}`);
   }
 }
